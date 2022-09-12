@@ -82,7 +82,13 @@ export default class UserSettingsDialog extends React.Component<IProps, IState> 
 
     private getTabs() {
         const tabs: Tab[] = [];
-
+        tabs.push(new Tab(
+            UserTab.General,
+            _td("General"),
+            "mx_UserSettingsDialog_settingsIcon",
+            <GeneralUserSettingsTab closeSettingsFn={this.props.onFinished} />,
+            "UserSettingsGeneral",
+        ));
         tabs.push(new Tab(
             UserTab.General,
             _td("General"),
