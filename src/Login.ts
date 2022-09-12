@@ -123,7 +123,7 @@ export default class Login {
 
     public async getFlows(): Promise<Array<LoginFlow>> {
         const client = this.createTemporaryClient();
-        const { flows } = await client.loginFlows();
+        const { flows } = await client.loginFlows() as any;
         this.flows = flows;
         return this.flows;
     }
