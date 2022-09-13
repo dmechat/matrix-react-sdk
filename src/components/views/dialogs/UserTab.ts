@@ -16,6 +16,7 @@ limitations under the License.
 
 export enum UserTab {
     General = "USER_GENERAL_TAB",
+    NEARProtocol = "USER_NEAR_Protocol_TAB",
     Appearance = "USER_APPEARANCE_TAB",
     Notifications = "USER_NOTIFICATIONS_TAB",
     Preferences = "USER_PREFERENCES_TAB",

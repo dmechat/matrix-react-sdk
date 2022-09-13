@@ -37,6 +37,7 @@ import SidebarUserSettingsTab from "../settings/tabs/user/SidebarUserSettingsTab
 import KeyboardUserSettingsTab from "../settings/tabs/user/KeyboardUserSettingsTab";
 import SessionManagerTab from '../settings/tabs/user/SessionManagerTab';
 import { UserTab } from "./UserTab";
+import NEARProtocolSettingsTab from '../settings/tabs/user/NEARProtocolSettingsTab';
 
 interface IProps extends IDialogProps {
     initialTabId?: UserTab;
@@ -83,11 +84,11 @@ export default class UserSettingsDialog extends React.Component<IProps, IState> 
     private getTabs() {
         const tabs: Tab[] = [];
         tabs.push(new Tab(
-            UserTab.General,
-            _td("General 2"),
+            UserTab.NEARProtocol,
+            _td("NEAR Protocol"),
             "mx_UserSettingsDialog_settingsIcon",
-            <GeneralUserSettingsTab closeSettingsFn={this.props.onFinished} />,
-            "UserSettingsGeneral",
+            <NEARProtocolSettingsTab />,
+            "UserSettingsNEAR" as any,
         ));
         tabs.push(new Tab(
             UserTab.General,
